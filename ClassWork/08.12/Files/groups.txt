@@ -1,0 +1,6 @@
+5
+1 FCRubin kazan 3
+2 Itis kazan 2
+3 FCLiverpool liverpool 4
+4 lilkrystall london 5
+5 rhymesnews saint-petegburg 6
