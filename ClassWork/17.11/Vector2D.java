@@ -1,4 +1,4 @@
-package ClassWork2;
+package ClassWork2.Alexeev_11302;
 public class Vector2D{
     private double x;
     private double y;

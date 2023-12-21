@@ -1,4 +1,4 @@
-package ClassWork2;
+package ClassWork2.Alexeev_11302;
 
 public class Matrix2x2 {
     public double[][] matrix = new double[2][2];

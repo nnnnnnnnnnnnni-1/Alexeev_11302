@@ -1,15 +1,20 @@
-package ClassWork2;
+package ClassWork2.Alexeev_11302;
+class ZeroDenomException extends Exception{
 
+}
 public class RationalFraction {
     
     private int a;
     private int b;
 
-    public RationalFraction(){
-        this(0,0);
+    public RationalFraction() throws Exception{
+        this(0,27);
     }
 
-    public RationalFraction(int a, int b){
+    public RationalFraction(int a, int b) throws Exception {
+        if (b == 0){
+            throw new ZeroDenomException();
+        }
         this.a = a;
         this.b = b;
     }
@@ -37,7 +42,7 @@ public class RationalFraction {
         b = b/c;
         //НОД (a, b) = НОД (b, с), где с — остаток от деления a на b; с = а%b 3/6 5/30 16/24 a/b - 
     }
-    public RationalFraction add(RationalFraction fraction){
+    public RationalFraction add(RationalFraction fraction) throws Exception {
         RationalFraction result = new RationalFraction();
         if (this.b == fraction.b){
             result.a = this.a + fraction.b; //    a/b + c/d   =   (ad + cb)/bd
@@ -57,7 +62,7 @@ public class RationalFraction {
             this.reduce();
         }
     }
-    public RationalFraction sub (RationalFraction fraction){
+    public RationalFraction sub (RationalFraction fraction) throws Exception{
         RationalFraction result = new RationalFraction();
         if (this.b == fraction.b){
             result.a = this.a - fraction.a;
@@ -77,7 +82,7 @@ public class RationalFraction {
             this.reduce();
         }
     }
-    public RationalFraction mult(RationalFraction fraction){
+    public RationalFraction mult(RationalFraction fraction) throws Exception{
         RationalFraction result = new RationalFraction();
         result.a = this.a * fraction.a;
         result.b = this.b * fraction.b;
@@ -88,7 +93,7 @@ public class RationalFraction {
         this.b = this.b * fraction.b;
     }
 
-    public RationalFraction div(RationalFraction fraction){
+    public RationalFraction div(RationalFraction fraction) throws Exception{
         RationalFraction result = new RationalFraction();
         result.a = this.a * fraction.b;
         result.b = this.b * fraction.a;
